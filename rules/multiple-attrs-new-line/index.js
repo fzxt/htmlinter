@@ -50,7 +50,9 @@ function multipleClassesNewline(tree, file) {
       const propertyInfo = position.properties[property];
       if (propertyInfo.start.line === position.opening.start.line) {
         const reason =
-          "Found " + property + " on the same line as element tag with multiple attrs. Move to a new line";
+          "Found " +
+          property +
+          " on the same line as element tag with multiple attrs. Move to a new line";
 
         file.message(reason, {
           line: propertyInfo.start.line,
